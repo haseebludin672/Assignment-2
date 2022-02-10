@@ -1,0 +1,248 @@
+Assignment 1 of C#
+
+Answer of Question 1:
+
+*for telephone number which is made of numaric value along some special character 
+a good choice is to use varchar or string both 
+if we dont use the special character still we will not use a numuric types like Uint or Ulong 
+because we dont do any caluculation on the phone numbers
+
+* for a person's hight i will use float type 
+becuse in meauring hight and it inclues decimal points so float is a good option
+
+* for age we can use byte 
+becuse its range is 0 to 255 the maximum age we see its around 150
+
+* for a person's gender we can use boolen like true and false if we have only two options like male and female 
+   else like enum we can use varchar we can use
+   
+*  for salary we can use decimal data type  
+
+
+* for a books ISBN we can use string or varchar
+
+
+*  for wight we can use float or double data types
+
+* for book's price we can use floating type
+
+* for a country's populaion we will use Ulong
+
+* for number of stars i would still goo for u long 
+
+* for number of stars in universe is unkonwn for such type and its numaric unlimited will use bigint
+
+* for number of employees int like we were using in SQL for employe id we were using int 
+and for employee name we can use varchar
+
+ 
+ 
+// answer of question two 
+
+-Value type created on the stack memory, but reference type created on the heap memory
+value type varibale will directly hold the value while reference type will hold the memory 
+update in any of value type variable it wont change in the orignal value
+it just change the copy of it, but updating value of reference type variable it make changes in orginal value 
+value type can not accept null values, but reference type can accept null values
+
+
+boxing : converting value type to reference type
+unboxing: converting reference type to value type
+
+
+//answer of question 3
+
+
+Managed resources are those that are pure .NET code and managed by the runtime and are under its direct control.
+or can say Managed resources basically mean anything managed by the CLR "common language runtime"
+
+Unmanaged resources are those that are not. File handles, pinned memory, COM objects, database connections etc.
+or Unmanaged resources typically mean native resources that are created and lifetime managed outside the CLR.
+
+answer of question 4
+
+garbage collector is automatic memory manager
+the garbage collector manages the allocation and release of memory for an application 
+
+
+// ----  question Error Practice ----
+ 
+
+ 
+ 
+ 
+ 
+ 
+// ------ question 5 writing code 
+
+// ------ SHOWING NUMBER OF BYTES A VALUE TYPE STORES IN MEMORY AND WHAT IS ITS MAX AND MIN VALUES---------
+
+Console.WriteLine("Number of bytes store in memory          Maximum Value               Minimum Value");
+
+//Sbyte
+Console.Write("sbyte:     "); Console.Write(sizeof(sbyte));
+Console.Write("                             "); Console.Write(sbyte.MaxValue); Console.Write("                         "); Console.Write(sbyte.MinValue);
+
+    Console.WriteLine();
+
+//byte
+Console.Write("byte:      "); Console.Write(sizeof(byte));
+Console.Write("                             "); Console.Write(byte.MaxValue); Console.Write("                          "); Console.Write(byte.MinValue);
+
+    Console.WriteLine();
+//Short
+Console.Write("Short:     "); Console.Write(sizeof(short));
+Console.Write("                             "); Console.Write(short.MaxValue); Console.Write("                       "); Console.Write(short.MinValue);
+
+    Console.WriteLine();
+//Ushort
+Console.Write("Ushort:    "); Console.Write(sizeof(ushort));
+Console.Write("                             "); Console.Write(ushort.MaxValue); Console.Write("                        "); Console.Write(ushort.MinValue);
+
+    Console.WriteLine();
+
+//Integer
+Console.Write("Integer:   "); Console.Write(sizeof(int));
+Console.Write("                             "); Console.Write(Int32.MaxValue);Console.Write("                  "); Console.Write(Int32.MinValue);
+
+    Console.WriteLine();
+
+//UInteger
+Console.Write("UInteger:  ");Console.Write( sizeof(uint));
+Console.Write("                             ");Console.Write(UInt32.MaxValue);Console.Write("                   "); Console.Write(UInt32.MinValue);
+
+    Console.WriteLine();
+
+//Long
+Console.Write("Long:      "); Console.Write(sizeof(long));
+Console.Write("                             "); Console.Write(long.MaxValue);Console.Write("         "); Console.Write(long.MinValue);
+
+        Console.WriteLine();
+
+//Ulong
+Console.Write("Ulong:     "); Console.Write(sizeof(ulong));
+Console.Write("                             "); Console.Write(ulong.MaxValue); Console.Write("         "); Console.Write(ulong.MinValue);
+
+    Console.WriteLine();
+
+//Float
+Console.Write("Float:     "); Console.Write(sizeof(float));
+Console.Write("                             "); Console.Write(float.MaxValue);Console.Write("               "); Console.Write(float.MinValue);
+
+
+Console.WriteLine();
+
+//Double
+Console.Write("Double:    "); Console.Write(sizeof(Double));
+Console.Write("                             "); Console.Write(Double.MaxValue); Console.Write("           "); Console.Write(Double.MinValue);
+
+Console.WriteLine();
+
+//Decimal
+Console.Write("Decimal:  "); Console.Write(sizeof(Decimal));
+Console.Write("                             "); Console.Write(Decimal.MaxValue);  Console.Write("     "); Console.Write(Decimal.MinValue);
+
+
+
+
+//----------  QUESTION 1:  -----------
+    //Taking an Integer from user and converting it to years,days....
+int ms = 1000;
+int micS = 1000000;
+Console.WriteLine("enter a Century");
+int C= Convert.ToInt32(Console.ReadLine());
+//double centries = Math.Ceiling(number /100);
+Console.Write($"CENTURIES= {C}  Years= {C*100}    days= {C*100 * 365.24}     HOURS= {C * 100 * 365.24*24}   " +
+              $"   Minutes= {C * 100 * 365.24*24*60}" +
+              $"\n\nSECONDS= {C * 100 * 365.24 * 24 * 60}    MilliSeconds= {C * 100 * 365.24 * 24 * 60*ms} " +
+              $"  MICSeconds= {C * 100 * 365.24 * 24 * 60 * ms* micS}\n\n ");
+
+
+
+
+
+
+
+
+
+ [ ---- When ever you want to divide a number by zero
+  //It will throw an exception (system.DividebyZeroException).
+  
+  //will throw an exception with a message cannot implicity converstion
+  ------What is the difference between x = y++; and x = ++y;? ---
+  here both experssion will give the same result,means increaming 1 to y's value and assigning it to x
+  
+  -----What is the difference between the = and == operators? ------
+  '='  While we want to assign value to a varible we use the operators
+  '==' this operator use for equality
+  
+  '_' it is a swith statment, The underscore (_) character replaces the default keyword to signify that it should match anything if reached
+
+
+  -----  What interface must an object implement to be enumerated over by using the foreach statement? 
+  /// IEnumerable interfaces for a custom collection
+  
+  
+  int max =500;for(byte i =0; i < max; i++){WriteLine(i);}
+  
+	OUT PUT FOR THIS CODE IS 0-49
+]
+	
+	-----FIZZBUZZZ--------
+	for (int i = 1; i <= 100; i++)
+{
+    if (i % 3 == 0 && i % 5 == 0)
+    {
+        Console.Write("FizzBuzz, ");
+    }
+    else if (i % 3 == 0)
+    {
+        Console.Write("Fizz, ");
+    }
+    else if (i % 5 == 0)
+    {
+        Console.Write("Buzz, ");
+    }
+    else
+    {
+        Console.Write($"{i}, ");
+    }
+}
+	
+	----GUESSINGN NUMBER----
+Console.WriteLine("I have a number in mind can  you guess it?");
+Console.WriteLine("Enter your Guess number");
+int guessNum = Convert.ToInt32(Console.ReadLine());
+
+if (myNum == guessNum)
+{
+    Console.WriteLine("You are Right!");
+
+}
+else if (myNum > guessNum)
+
+{
+    Console.WriteLine($"My number is greater then your guess {myNum}");
+}
+else
+    Console.WriteLine($"My number is lower then your guess number{myNum}");
+
+
+  
+  
+//--------      Question 2:Print-a-Pyramid.Like the star pattern    -------
+			
+  int number, i, k, count = 1;
+        Console.WriteLine("Enter number of rows");
+        number = int.Parse(Console.ReadLine());
+        count = number - 1;
+        for (k = 1; k <= number; k++)
+        {
+            for (i = 1; i <= count; i++)
+                Console.Write(" ");
+            count--;
+            for (i = 1; i <= 2 * k - 1; i++)
+                Console.Write("*");
+            Console.WriteLine();
+        }
+        count = 1;
